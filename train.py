@@ -84,9 +84,9 @@ if __name__ == "__main__":
 
             # Initialize parameters
             for param in encoder_model.parameters():
-                nn.init.normal_(param, mean=0.0, std=np.sqrt(0.01))
+                nn.init.normal_(param, mean=0.0, std=0.01)
             for param in decoder_model.parameters():
-                nn.init.normal_(param, mean=0.0, std=np.sqrt(0.01))
+                nn.init.normal_(param, mean=0.0, std=0.01)
 
             train_dataloader = DataLoader(mnist_train, batch_size=M, shuffle=True)
 
